@@ -1,34 +1,34 @@
-// script.js
-
-const 1-root = document(order1),
-const 1-biscuits: document(biscuits),
-const 1-donuts: document(donuts),
-const 1-pancakes: document(pancakes),
-const 1-status: document(status)
-
-const 2-root = document(order2),
-const 2-biscuits: document(biscuits),
-const 2-donuts: document(donuts),
-const 2-pancakes: document(pancakes),
-const 2-status: document(status)
-
-const 3-root = document(order3),
-const 3-biscuits: document(biscuits),
-const 3-donuts: document(donuts),
-const 3-pancakes: document(pancakes),
-const 3-status: document(status)
-
-1-biscuits= 1-root.biscuits,
-1-donuts = 1-root.donuts,
-1-pancakes = 1-root.pancakes,
-1-status = 1-root.status ? Delivered : Pending
-
-2-biscuits= 2-root.biscuits,
-2-donuts = 2-root.donuts,
-2-pancakes = 2-root.pancakes,
-2-status = 2-root.status ? Delivered : Pending
-
-3-biscuits= 3-root.biscuits,
-3-donuts = 3-root.donuts,
-3-pancakes = 3-root.pancakes,
-3-status = 3-root.status ? Delivered : Pending
+const root1 = document.querySelector('[data-key="order1"]'); // 1 to one
+const biscuit1 = parseInt(root1.getAttribute("data-biscuits")); // get Attribute
+const donut1 = parseInt(root1.getAttribute("data-donuts")); //used parseInt for calculations
+const pancake1 = parseInt(root1.getAttribute("data-pancakes"));
+const status1 =
+    root1.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending";
+const one = document.querySelector("h2");
+//order 2 to order 1
+document.querySelector("dd").innerText = biscuit1;
+document.querySelector(".donuts dd").innerText = donut1;
+document.querySelector(".pancakes dd").innerText = pancake1;
+document.querySelector(".status dd").innerText = status1;
+const root2 = document.querySelector('[data-key="order2"]');
+const biscuit2 = parseInt(root2.getAttribute("data-biscuits"));
+const donut2 = parseInt(root2.getAttribute("data-donuts"));
+const pancake2 = parseInt(root2.getAttribute("data-pancakes"));
+const status2 =
+    root2.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending"; //added tenery operator (? :) is used to check the value of the 'data delivered' attribite and set the text content accordingly.
+//order 2
+document.querySelectorAll(".biscuits dd")[1].innerText = biscuit2;
+document.querySelectorAll(".donuts dd")[1].innerText = donut2;
+document.querySelectorAll(".pancakes dd")[1].innerText = pancake2;
+document.querySelectorAll(".status dd")[1].innerText = status2;
+//order 3
+const root3 = document.querySelector('[data-key="order3"]');
+const biscuit3 = parseInt(root3.getAttribute("data-biscuits"));
+const donut3 = parseInt(root3.getAttribute("data-donuts"));
+const pancake3 = parseInt(root3.getAttribute("data-pancakes"));
+const status3 =
+    root3.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending";
+document.querySelectorAll(".biscuits dd")[2].innerText = biscuit3;
+document.querySelectorAll(".donuts dd")[2].innerText = donut3;
+document.querySelectorAll(".pancakes dd")[2].innerText = pancake3;
+document.querySelectorAll(".status dd")[2].innerText = status3;
